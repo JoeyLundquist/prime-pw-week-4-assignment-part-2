@@ -11,28 +11,42 @@ body {
 }
 
 .info {
-    background-color: blueviolet;
-    border: 5px blue solid;
+    background-color: #e847AE;
+    border: 5px #3B27BA solid;
     border-radius: 30px;
     margin: 0 auto;
     width:99%;
-    height: 875px;
+    height: 800px;
+    overflow: hidden;
 }
 
 h1,h2 {
     text-align: center;
+    background-color: #13CA91;
+    color: white;
 }
 
 h3 {
     text-align: center;
-    margin-top: 430px;
+    margin-bottom: 50px;
+    position: sticky;
+    color: white;
+    animation: h3 3s ease-in 2s 1 alternate forwards;
 }
 
 img {
-    margin-left: 1600px;
-    margin-top: 0;
-    transform: translateY(-200px);
+    margin-left: 1900px;
+    margin-top: -400px;
     width: 300px;
-
+    animation: driving 3s ease-in 2s 1 alternate forwards;
 }
 
+@keyframes driving {
+    0% {width: 300px; margin-left: 1900px; margin-top: -400px;}
+    100% {width: 600px; margin-left: 600px; margin-top: 230px;}
+}
+
+@keyframes h3 {
+    0%{background-color: #e847AE;}
+    100%{background-color: #13CA91;}
+}
