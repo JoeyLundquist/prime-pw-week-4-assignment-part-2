@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aqua;
+}
+
+body {
+    background-color: black;
+}
+
+.info {
+    background-color: blueviolet;
+    border: 5px blue solid;
+    border-radius: 30px;
+    margin: 0 auto;
+    width:99%;
+    height: 875px;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 430px;
+}
+
+img {
+    margin-left: 1600px;
+    margin-top: 0;
+    transform: translateY(-200px);
+    width: 300px;
+
+}
+
