@@ -4,6 +4,8 @@
 
 header {
     background-color: aqua;
+    border: 1px aqua solid;
+    border-radius: 15px;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
 }
 
 .info {
+    position: absolute;
     background-color: #e847AE;
     border: 5px #3B27BA solid;
     border-radius: 30px;
@@ -20,10 +23,16 @@ body {
     overflow: hidden;
 }
 
+h1{
+    border:1px #13CA91 solid;
+    border-radius: 15px;
+}
+
 h1,h2 {
     text-align: center;
     background-color: #13CA91;
     color: white;
+    margin-top: 0;
 }
 
 h3 {
@@ -31,22 +40,78 @@ h3 {
     margin-bottom: 50px;
     position: sticky;
     color: white;
-    animation: h3 3s ease-in 2s 1 alternate forwards;
+    animation: h3 5s linear 0s 1 alternate forwards;
 }
 
 img {
     margin-left: 1900px;
     margin-top: -400px;
     width: 300px;
-    animation: driving 3s ease-in 2s 1 alternate forwards;
+    animation: driving 5s linear 0s 1 alternate forwards;
+    overflow: hidden;
+}
+
+.road {
+    position: absolute;
+    border:1px black solid;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    transform: rotate(-27deg) translateY(300px);
+}
+
+.road2 {
+    position: absolute;
+    border:1px black solid;
+    width: 105%;
+    height: 250px;
+    background-color: black;
+    transform: rotate(27deg) translate(-113px, 300px);
+}
+
+
+li {
+    position: absolute;
+    list-style: none;
+    width: 20px;
+    height:20px;
+    background-color: black;
+    border-radius: 50%;
+    left: 43%;
+    bottom:300px;
+    opacity: 0;
+}
+
+li:nth-child(even){
+    animation: smokeEven 1500ms linear 5.5s infinite;
+}
+
+li:nth-child(odd){
+    animation: smokeOdd 1250ms linear 5.5s infinite;
+}
+
+@keyframes smokeEven{
+    0%{background-color:#262626; transform: translate(0,0) scale(1); opacity: 1; filter: blur(5px);}
+    100%{background-color:#262626;transform: translate(25px,-100px) scale(3); opacity: 1; filter: blur(10px);}
+}
+
+@keyframes smokeOdd{
+    0%{background-color:#262626; transform: translate(0,0) scale(1); opacity: 1; filter: blur(5px);}
+    100%{background-color:#262626; transform: translate(-25px,-100px) scale(3); opacity: 1; filter: blur(10px);}
 }
 
 @keyframes driving {
-    0% {width: 300px; margin-left: 1900px; margin-top: -400px;}
-    100% {width: 600px; margin-left: 600px; margin-top: 230px;}
+    0% {width: 300px; margin-left: 1900px; margin-top: -250px; transform: rotate(0deg);}
+    50%{width:450px; margin-left: 1250px; margin-top: -115px; transform: rotate(0deg);}
+    100% {width: 600px; margin-left: 400px; margin-top: -50px; transform: rotate(27deg);}
 }
 
 @keyframes h3 {
-    0%{background-color: #e847AE;}
-    100%{background-color: #13CA91;}
+    0%{background-color: #e847AE; margin-top:0px;}
+    100%{background-color: #13CA91; margin-top:700px;}
+}
+
+@keyframes smoke {
+    0%{}
+    100%{}
 }
