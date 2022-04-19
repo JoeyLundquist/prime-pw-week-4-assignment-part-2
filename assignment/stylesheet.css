@@ -28,17 +28,22 @@ h1{
     border-radius: 15px;
 }
 
+h2{
+    position: relative;
+}
+
 h1,h2 {
     text-align: center;
     background-color: #13CA91;
     color: white;
     margin-top: 0;
+    overflow: hidden;
 }
 
 h3 {
     text-align: center;
     margin-bottom: 50px;
-    position: sticky;
+    position: relative;
     color: white;
     animation: h3 5s linear 0s 1 alternate forwards;
 }
@@ -77,7 +82,7 @@ li {
     height:20px;
     background-color: black;
     border-radius: 50%;
-    left: 43%;
+    left: 37%;
     bottom:300px;
     opacity: 0;
 }
