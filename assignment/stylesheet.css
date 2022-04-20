@@ -118,7 +118,3 @@ li:nth-child(odd){
     100%{background-color: #13CA91; margin-top:700px;}
 }
 
-@keyframes smoke {
-    0%{}
-    100%{}
-}
